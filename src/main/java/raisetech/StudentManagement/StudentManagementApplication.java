@@ -32,11 +32,12 @@ public class StudentManagementApplication {
     this.age = age;
   }
 
-  @PostMapping("/StudentMap")
+  @PostMapping("/studentMap")
   public void setStudentMap (String name, String age) {
     studentMap.put(name, age);
-    this.name = name;
-    this.age = age;
+//    this.name = name;
+//    this.age = age;
+    System.out.println(studentMap);
   }
 
   @PostMapping("/studentName")
