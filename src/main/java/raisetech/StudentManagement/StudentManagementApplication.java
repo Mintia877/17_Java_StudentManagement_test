@@ -15,7 +15,9 @@ public class StudentManagementApplication {
   private String name = "Enami Kouji";
   private String age = "37";
 
-  private Map<String, String> studentMap = new HashMap<>();
+
+//  private Map<String, String> studentMap = new HashMap<>();
+  private Map<String, String> studentMap;
 
   public static void main(String[] args) {
 		SpringApplication.run(StudentManagementApplication.class, args);
@@ -32,11 +34,12 @@ public class StudentManagementApplication {
     this.age = age;
   }
 
-  @PostMapping("/StudentMap")
+  @PostMapping("/studentMap")
   public void setStudentMap (String name, String age) {
     studentMap.put(name, age);
-    this.name = name;
-    this.age = age;
+//    this.name = name;
+//    this.age = age;
+    System.out.println(studentMap);
   }
 
   @PostMapping("/studentName")
