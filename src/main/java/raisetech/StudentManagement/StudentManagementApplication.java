@@ -15,7 +15,9 @@ public class StudentManagementApplication {
   private String name = "Enami Kouji";
   private String age = "37";
 
-  private Map<String, String> studentMap = new HashMap<>();
+
+//  private Map<String, String> studentMap = new HashMap<>();
+  private Map<String, String> studentMap;
 
   public static void main(String[] args) {
 		SpringApplication.run(StudentManagementApplication.class, args);
