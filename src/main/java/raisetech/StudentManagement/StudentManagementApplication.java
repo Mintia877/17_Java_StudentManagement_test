@@ -1,5 +1,7 @@
 package raisetech.StudentManagement;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +15,9 @@ public class StudentManagementApplication {
   private String name = "Enami Kouji";
   private String age = "37";
 
+  private Map<String, String> studentMap = new HashMap<>();
 
-
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		SpringApplication.run(StudentManagementApplication.class, args);
 	}
 
@@ -30,8 +32,9 @@ public class StudentManagementApplication {
     this.age = age;
   }
 
-  @PostMapping("/StudentName")
-  public void setStudentName (String name, String age) {
+  @PostMapping("/StudentMap")
+  public void setStudentMap (String name, String age) {
+    studentMap.put(name, age);
     this.name = name;
     this.age = age;
   }
